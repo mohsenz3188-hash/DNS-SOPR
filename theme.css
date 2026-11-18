@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap');
+@import "tailwindcss";
+@import "tailwindcss-safe-area";
+
+@theme {
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+  --text-sm: 14px;
+  --text-sm--line-height: 20px;
+  --text-base: 16px;
+  --text-base--line-height: 24px;
+  --text-lg: 18px;
+  --text-lg--line-height: 28px;
+  --text-xl: 20px;
+  --text-xl--line-height: 28px;
+  --text-2xl: 24px;
+  --text-2xl--line-height: 32px;
+  --text-3xl: 30px;
+  --text-3xl--line-height: 36px;
+}
+
+:root {
+  color-scheme: light dark;
+  --bg: #eef1f6;
+  --surface: #ffffff;
+  --surface2: #f6f8fb;
+  --text: #0f172a;
+  --dim: #64748b;
+  --border: #e2e8f0;
+  --accent: #00a870;
+  --accent-soft: #e6f7f0;
+  --blue: #2563eb;
+  --danger: #dc2626;
+  --sidebar: #111827;
+  --sidebar-text: #cbd5e1;
+  --radius: 12px;
+  --space-surface: var(--surface);
+  --space-surface-alt: var(--surface2);
+  --space-muted: var(--dim);
+  --space-border: var(--border);
+  --space-accent: var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --surface2: #16213a;
+    --text: #f1f5f9;
+    --dim: #94a3b8;
+    --border: #334155;
+    --accent: #00c98a;
+    --accent-soft: #0b3527;
+    --blue: #60a5fa;
+    --sidebar: #0b1220;
+    --sidebar-text: #cbd5e1;
+  }
+}
+
+body {
+  font-family: "Vazirmatn", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.mono {
+  font-family: ui-monospace, "JetBrains Mono", SFMono-Regular, Menlo, monospace;
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+@layer base {
+  button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) {
+    min-height: 2.25rem;
+  }
+}

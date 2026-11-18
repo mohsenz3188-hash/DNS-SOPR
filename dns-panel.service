@@ -1,0 +1,16 @@
+[Unit]
+Description=DNS Panel
+After=network.target
+
+[Service]
+Type=simple
+User=dns-panel
+WorkingDirectory=/opt/dns-panel
+ExecStart=/usr/bin/node /opt/dns-panel/standalone/server.js
+Restart=always
+RestartSec=3
+Environment=PORT=2053
+Environment=DATA_DIR=/opt/dns-panel/data
+
+[Install]
+WantedBy=multi-user.target
